@@ -1,0 +1,5 @@
+<!--pages/index/index.wxml-->
+<view class="index-page">
+    <tab tab-data="{{tabData}}" style-config="{{tabConfig}}" bindchange="ontabchange"></tab>
+    <tab-bar tab-bar-data="{{tabBarData}}"></tab-bar>
+</view>

@@ -1,0 +1,17 @@
+/* components/tab/tab.wxss */
+
+.tab-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: 0.6rpx solid #ebebeb;
+    position: relative;
+    font-weight: bold;
+}
+
+.tab-header-item {
+    transition: all 0.25s;
+}
+
+.tab-mark {
+}

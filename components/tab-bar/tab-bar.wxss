@@ -1,0 +1,38 @@
+/* components/tab-bar/tab-bar.wxss */
+
+.tab-bar-component {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.6rpx solid #ebebeb;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.tab-bar-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tab-bar-type-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-bar-col-img {
+    width: 42.23rpx;
+    height: 42.23rpx;
+    background-color: #ccc;
+}
+
+.tab-bar-col-text {
+    font-size: 18.1rpx;
+    color: #808080;
+}

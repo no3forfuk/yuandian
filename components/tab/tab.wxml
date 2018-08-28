@@ -1,0 +1,8 @@
+<!--components/tab/tab.wxml-->
+<view class="tab-header" style="padding:{{style.distance}};">
+    <view wx:for="{{tabData.items}}" wx:key="{{index}}" class="tab-header-item" style="color:{{style.color}};font-size:{{style.size}};line-height:{{style.size}};font-weight:{{style.bold?'bold':'normal'}};margin:{{style.span}};color:{{style.current === index?style.activeColor:style.color}};" bindtap="ontapitem" data-index="{{index}}" data-item="{{item}}">{{item.label}}</view>
+    <view class="tab-mark"></view>
+</view>
+<view class="tab-body">
+    <slot></slot>
+</view>
