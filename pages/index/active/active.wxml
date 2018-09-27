@@ -1,0 +1,12 @@
+<!--pages/index/active/active.wxml-->
+<view class="index-active-component">
+    <tab tab-data="{{tabData}}" bindchange="ontabchange">
+        <scroll-view class="tab-body-active" scroll-y style="height:{{tabBodyHeight}}px;" bindscroll="emitpagescroll" hidden="{{currentPage !== tabData.items[0].key}}">
+            <activity></activity>
+        </scroll-view>
+        <scroll-view class="tab-body-active" scroll-y style="height:{{tabBodyHeight}}px;" bindscroll="emitpagescroll" hidden="{{currentPage !== tabData.items[1].key}}">
+            <award></award>
+        </scroll-view>
+    </tab>
+    <tab-bar tab-bar-data="{{tabBarData}}"></tab-bar>
+</view>

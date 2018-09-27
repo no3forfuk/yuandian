@@ -1,0 +1,38 @@
+<!--pages/index/mine/mine.wxml-->
+<scroll-view scroll-y class="index-mine" bindscroll="emitpagescroll">
+    <view class="index-mine-header">顶部placeholder</view>
+    <!-- 退出&开锁 -->
+    <view class="mine-exit-options">
+        <block wx:for="{{operateData}}" wx:key="{{index}}">
+            <view class="operate-items" style="width:{{100/operateData.length}}%;">
+                <image class="operate-items-img"></image>
+                <text class="operate-items-text">{{item.label}}</text>
+            </view>
+            <view class="shuxian" wx:if="{{index < operateData.length-1 || index == 0}}"></view>
+        </block>
+    </view>
+    <!-- 租客部分 -->
+    <view class="mine-renter-options">
+        <block wx:for="{{renterData}}" wx:key="{{index}}">
+            <navigator class="renter-items" url="{{item.href}}" bindtap="onlinkbefore" data-target="{{item.label}}">
+                <view class="renter-items-icon">
+                    <image class="renter-items-img"></image>
+                </view>
+                <text class="renter-items-text {{index == renterData.length-1? 'border-none' : ''}}">{{item.label}}</text>
+            </navigator>
+        </block>
+    </view>
+    <!-- 房东部分 -->
+    <view class="mine-renter-options">
+        <block wx:for="{{landlordData}}" wx:key="{{index}}">
+            <navigator class="renter-items" url="{{item.href}}" bindtap="onlinkbefore" data-target="{{item.label}}">
+                <view class="renter-items-icon">
+                    <image class="renter-items-img"></image>
+                </view>
+                <text class="renter-items-text {{index == landlordData.length-1? 'border-none' : ''}}">{{item.label}}</text>
+            </navigator>
+        </block>
+    </view>
+    <!-- footer placeholder  -->
+    <view style="height:90.5rpx;width:100%;"></view>
+</scroll-view>

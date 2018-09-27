@@ -1,0 +1,14 @@
+/* pages/index/active/active.wxss */
+
+.index-active-component {
+    width: 100%;
+    height: 100%;
+}
+
+.tab-body-active {
+    display: block;
+}
+
+.tab-body-draw {
+    display: block;
+}

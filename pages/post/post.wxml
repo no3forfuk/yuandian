@@ -1,0 +1,47 @@
+<!--pages/post/post.wxml-->
+
+<view class="post-page">
+    <scroll-view class="post-page-content">
+        <view class="post-card">
+            <view class="post-card-left">
+                <image class="post-card-left-img"></image>
+            </view>
+            <view class="post-card-right">
+                <view class="post-card-right-name">{{info.name}}</view>
+                <view class="post-card-right-content">{{info.content}}</view>
+                <view class="post-card-right-imgs" style="width:{{info.img.length>3?'400rpx':'100%'}};">
+                    <image class="post-card-right-img" wx:for="{{info.img}}" wx:key="{{index}}"></image>
+                </view>
+                <view class="post-created-time">8.21.2018</view>
+            </view>
+        </view>
+        <view class="post-comment-ul">
+            <view class="post-comment-ul-title">评论</view>
+            <view class="post-comment-li">
+                <view class="post-card-left">
+                    <image class="post-card-left-img"></image>
+                </view>
+                <view class="post-card-right">
+                    <view class="post-comment-user-name">
+                        <text>{{info.name}}</text>
+                        <text style="color:#929292;font-size:8px;font-weight:normal;">7小时前</text>
+                    </view>
+                    <view class="post-comment-content">
+                        {{commentText}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="post-page-comment">
+        <view class="post-page-input-box">
+            <view class="post-page-input-placeholder">
+                <text class="post-page-input-placeholder-hf">回复</text>
+                <text class="post-page-input-placeholder-name">隔壁老王:</text>
+            </view>
+            <input class="post-page-input" cursor-spacing="5" bindinput="oninputcomment"></input>
+        </view>
+        <view class="post-page-send-btn" bindtap="onsubmitcomment" style="color:{{commentText.length>0?'#797979':'#C3C2C2'}};">发送</view>
+
+    </view>
+</view>

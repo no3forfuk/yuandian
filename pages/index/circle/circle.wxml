@@ -1,0 +1,33 @@
+<!--pages/index/circle/circle.wxml-->
+<tab tab-data="{{tabData}}" bindchange="ontabchange">
+    <scroll-view class="circle-page" scroll-y="true" style="height:{{tabBodyHeight}}px;" bindscroll="emitpagescroll">
+        <view class="circle-header">
+            <view class="circle-header-photo" bindtap="onaddpost">
+                <image class="circle-header-photo-icon"></image>
+            </view>
+            <view class="circle-header-first-item-box" style="opacity:{{firstItemOpacity}};">
+                <view class="circle-header-first-item">
+                    <image class="circle-header-first-me"></image>
+                    <view class="circle-header-first-add">
+                        <text>+</text>
+                    </view>
+                </view>
+            </view>
+            <scroll-view class="circle-header-img" scroll-x="true" bindscroll="onscrollhotuser">
+                <block wx:for="{{hotUser}}" wx:key="{{index}}">
+                    <view class="circle-header-item" style="opacity:{{index > scrollCurrent ?1:itemOpacity}};" id="{{'item' + index}}">
+                        <image class="circle-header-photo-me"></image>
+                        <view class="circle-header-add">
+                            <text>+</text>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+        <block wx:for="{{postList}}" wx:key="{{index}}">
+            <post-card post-info="{{item}}" user="{{item.user}}"></post-card>
+        </block>
+        <!-- footer palceholder -->
+        <view style="height:90.5rpx;width:100%;"></view>
+    </scroll-view>
+</tab>

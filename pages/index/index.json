@@ -1,5 +1,9 @@
 {
     "usingComponents": {
+        "active": "./active/active",
+        "circle": "./circle/circle",
+        "mall": "./mall/mall",
+        "mine": "./mine/mine",
         "tab": "/components/tab/tab",
         "tab-bar": "/components/tab-bar/tab-bar"
     }

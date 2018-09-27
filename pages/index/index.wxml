@@ -1,5 +1,8 @@
 <!--pages/index/index.wxml-->
 <view class="index-page">
-    <tab tab-data="{{tabData}}" style-config="{{tabConfig}}" bindchange="ontabchange"></tab>
-    <tab-bar tab-bar-data="{{tabBarData}}"></tab-bar>
+    <active wx:if="{{currentPage === 'active'}}" bindonpagescroll="pageScroll" id="active"></active>
+    <circle wx:if="{{currentPage === 'circle'}}" bindonpagescroll="pageScroll" id="circle"></circle>
+    <mall wx:if="{{currentPage === 'mall'}}" bindonpagescroll="pageScroll" id="mall"></mall>
+    <mine wx:if="{{currentPage === 'mine'}}" bindonpagescroll="pageScroll" id="mine"></mine>
+    <!-- <tab-bar tab-bar-data="{{tabBarData}}" bindchange="ontabbarchange"></tab-bar> -->
 </view>

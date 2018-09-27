@@ -1,10 +1,14 @@
 <!--components/tab-bar/tab-bar.wxml-->
-<view class="tab-bar-component" style="height:{{style.height}};">
+<view class="tab-bar-component" style="height:{{style.height}};" animation="{{animationData}}">
     <slot></slot>
-    <view wx:for="{{tabBarData.items}}" wx:key="{{index}}" style="width:calc(100% / {{tabBarData.items.length}});" class="tab-bar-item" wx:if="{{childType !== 'slot'}}">
-        <view class="tab-bar-type-col">
-            <image class="tab-bar-col-img"></image>
+    <view wx:for="{{tabBarData.items}}" wx:key="{{index}}" style="width:calc(100% / {{tabBarData.items.length}});" class="tab-bar-item" wx:if="{{childType !== 'slot'}}" bindtap="ontapitem" data-item="{{item}}" data-index="{{index}}">
+        <view class="tab-bar-type-col" wx:if="{{childType === 'col'}}" style="{{style.current === index? style.activeStyle:style.style}}">
+            <view class="tab-bar-item-dot" wx:if="{{style.current === index}}"></view>
+            <image class="tab-bar-col-img" src="{{item.imgUrl}}"></image>
             <text class="tab-bar-col-text">{{item.label}}</text>
+        </view>
+        <view wx:if="{{childType === 'row'}}">
+
         </view>
     </view>
 </view>

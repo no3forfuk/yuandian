@@ -1,0 +1,23 @@
+<!--pages/user/user.wxml-->
+<scroll-view scroll-y class="index-mine" bindscroll="emitpagescroll">
+    <view class="user-info-header">
+        <image class="user-info-photo" src="{{userInfo.avatar}}" bindtap="onviewavatar"></image>
+        <view class="user-info-name">
+            <text class="user-info-name-text">{{userInfo.name}}</text>
+        </view>
+        <view class="user-info-desc">
+            <text class="user-info-desc-num">{{userInfo.focus}}</text>
+            <text class="user-info-desc-text">关注</text>
+            <text class="user-info-desc-num">{{userInfo.fans}}</text>
+            <text class="user-info-desc-text">粉丝</text>
+            <text class="user-info-desc-num">{{userInfo.like}}</text>
+            <text class="user-info-desc-text">获赞</text>
+        </view>
+    </view>
+    <block wx:for="{{userPost}}" wx:key="{{index}}">
+        <post-card post-info="{{item}}" user="{{userInfo}}"></post-card>
+    </block>
+    <!-- footer placeholder  -->
+    <view style="height:90.5rpx;width:100%;"></view>
+</scroll-view>
+<tab-bar tab-bar-data="{{tabBarData}}" bindchange="ontabbarchange"></tab-bar>

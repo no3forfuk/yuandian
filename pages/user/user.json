@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "post-card": "/template/postCard/postCard",
+        "tab-bar": "/components/tab-bar/tab-bar"
+    }
+}

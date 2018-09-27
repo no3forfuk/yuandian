@@ -1,0 +1,12 @@
+<!--pages/index/mall/mall.wxml-->
+
+<view class="index-mall-component">
+    <tab tab-data="{{tabData}}" bindchange="ontabchange">
+        <scroll-view class="tab-body-mall" scroll-y style="height:{{tabBodyHeight}}px;" hidden="{{currentPage !== tabData.items[0].key}}" bindscroll="emitpagescroll">
+            <ydmall></ydmall>
+        </scroll-view>
+        <scroll-view class="tab-body-mall" scroll-y style="height:{{tabBodyHeight}}px;" hidden="{{currentPage !== tabData.items[1].key}}">
+            <visited></visited>
+        </scroll-view>
+    </tab>
+</view>

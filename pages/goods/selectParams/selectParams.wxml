@@ -1,0 +1,21 @@
+<!--pages/goods/selectParams/selectParams.wxml-->
+<view class="select-params">
+    <view class="params-body">
+        <block wx:for="{{paramData}}" wx:key="{{index}}">
+            <view class="params-items">
+                <text>{{item.label}}</text>
+                <view class="params-items-list">
+                    <block wx:for="{{item.items}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="list">
+                        <text class="items-list {{list.stock? 'have-stock':'no-stock'}} {{idx == defaultSelect[index]? 'selected':''}}" bindtap="onselected" data-have="{{list.stock}}" data-index="{{index}}" data-idx="{{idx}}">
+                            <text>{{list.text}}</text>
+                        </text>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- footer -->
+    <view class="select-comfirm" bindtap="emitclose">
+        <text>确定</text>
+    </view>
+</view>

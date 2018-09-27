@@ -1,0 +1,4 @@
+<!--components/popup/popup.wxml-->
+<view class="popup-components" style="background-color:{{bgc}};">
+    <slot></slot>
+</view>

@@ -1,0 +1,90 @@
+<!--pages/houseDetails/houseDetails.wxml-->
+<scroll-view class="resources--details-page" scroll-y="true" bindscroll="onpagescroll">
+    <!-- swiper -->
+    <swiper class="details-swiper" indicator-dots="{{detailSwiper.dots}}" indicator-color="{{detailSwiper.indicatorColor}}" indicator-active-color="{{detailSwiper.activeColor}}" autoplay="{{detailSwiper.autoplay}}" interval="{{detailSwiper.interval}}" duration="{{detailSwiper.duration}}"
+        circular="{{detailSwiper.circular}}">
+        <block wx:for="{{detailSwiper.items}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item.src}}" class="swiper-item-img"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- info -->
+    <view class="details-info">
+        <view class="info-name">宝安区-原点公寓</view>
+        <view class="info-reason">推荐理由：环境便利，位置极佳</view>
+        <view class="info-price">3750/月</view>
+    </view>
+    <!-- position -->
+    <view class="base-card details-position">
+        <view class="base-label position-label">地理位置</view>
+        <view class="position-content">
+            <text class="iconfont yd-dingwei"></text>
+            <text class="position-content-text">深圳市宝安区宝安大道</text>
+        </view>
+    </view>
+    <!-- date -->
+    <view class="base-card details-date">
+        <view class="base-label date-label">入住日期</view>
+    </view>
+    <!-- house -->
+    <view class="base-card details-house">
+        <view class="base-label house-label">房源信息</view>
+        <view class="house-content">
+            <block wx:for="{{houseContent}}" wx:key="{{index}}">
+                <view class="house-content-item">
+                    <text class="house-content-item-label">{{item.label}}</text>
+                    <text class="house-content-item-text">{{item.text}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- room -->
+    <view class="base-card details-room">
+        <view class="base-label room-label">房间配置</view>
+        <view class="room-content">
+            <block wx:for="{{roomConfig}}" wx:key="{{index}}">
+                <view class="room-content-item">
+                    <image class="room-item-img"></image>
+                    <text class="room-content-item-text">{{item.text}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- hardware -->
+    <view class="base-card details-herdware">
+        <view class="base-label herdware-label">硬件设施</view>
+        <view class="hardware-content">
+            <block wx:for="{{hardwareData}}" wx:key="{{index}}">
+                <view class="hardware-item">
+                    <image class="hardware-img"></image>
+                    <text class="hardware-text">{{item.text}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- likeness -->
+    <view class="base-card">
+        <view class="base-label">类似房源</view>
+        <view class="likeness-content">
+            <block wx:for="{{likenessData}}" wx:key="{{index}}">
+                <view class="likeness-item">
+                    <image class="likeness-img"></image>
+                    <tetx class="likeness-type">复式一房一厅</tetx>
+                    <tetx class="likeness-posi">深圳宝安区东伟街道办</tetx>
+                    <tetx class="likeness-price">￥2700/月</tetx>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- footer placeholder  -->
+    <view style="height:90.5rpx;width:100%;margin-top:14.48rpx;"></view>
+</scroll-view>
+<view class="details-page-footer">
+    <view class="footer-collect" bindtap="toggleCollect">
+        <text class="iconfont yd-shoucang footer-collect-icon {{isCollected?'isCollected':''}}"></text>
+        <text class="footer-collect-text">收藏</text>
+    </view>
+    <view class="footer-order">预约看房</view>
+    <view class="footer-pay">去下单</view>
+</view>

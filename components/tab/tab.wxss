@@ -14,4 +14,12 @@
 }
 
 .tab-mark {
+    width: 12px;
+    height: 2.41px;
+    border-radius: 1.21px;
+    background-color: #2c85f4;
+    position: absolute;
+    bottom: -1px;
+    left: 0rpx;
+    transition: all 0.3s;
 }

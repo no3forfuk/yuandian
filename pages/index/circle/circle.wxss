@@ -1,0 +1,120 @@
+/* pages/index/circle/circle.wxss */
+
+.circle-page {
+    wdith: 100%;
+}
+
+.circle-header {
+    width: 100%;
+    height: 130.32rpx;
+    display: flex;
+    /* padding: 18.1rpx 0; */
+    flex-direction: row;
+    align-items: center;
+}
+
+.circle-header-photo {
+    width: 112.22rpx;
+    height: 105.59rpx;
+    border-right: 0.6rpx solid #cbcbcb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle-header-photo-icon {
+    width: 56.72rpx;
+    height: 47.06rpx;
+    background-color: #eee;
+}
+
+.circle-header-first-item-box {
+    position: absolute;
+    z-index: -1;
+    top: 18.1rpx;
+    transition: all 0.2s;
+    left: 112.22rpx;
+    /* background-color: pink; */
+}
+
+.circle-header-first-item {
+    position: relative;
+    /* width: 101.36rpx;
+    height: 101.36rpx; */
+    padding-left: 18.1rpx;
+    /* background-color: pink; */
+}
+
+.circle-header-item {
+    position: relative;
+    /* width: 101.36rpx;
+    height: 101.36rpx; */
+    display: inline-block;
+    padding-left: 18.1rpx;
+}
+
+.circle-header-img {
+    width: calc(100% - 112.22rpx);
+    height: 100%;
+    white-space: nowrap;
+    padding-top: 18.1rpx;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.circle-header-img::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.circle-header-item:nth-child(1) {
+    opacity: 0;
+}
+
+.circle-header-photo-me {
+    width: 101.36rpx;
+    height: 101.36rpx;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.circle-header-first-me {
+    width: 101.36rpx;
+    height: 101.36rpx;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.circle-header-add {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fd8ba0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    bottom: 9.05rpx;
+    position: absolute;
+    right: 9.05rpx;
+}
+
+.circle-header-first-add {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fd8ba0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    bottom: 9.05rpx;
+    position: absolute;
+    right: 9.05rpx;
+}

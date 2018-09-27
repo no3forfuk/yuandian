@@ -1,0 +1,27 @@
+<!--template/postCard/postCard.wxml-->
+
+<view class="post-card">
+    <view class="post-card-left">
+        <image class="post-card-left-img" src="{{info.data.head_image_url}}" bindtap="onlinktouser" data-id="{{info.data.uid}}"></image>
+    </view>
+    <view class="post-card-right">
+        <view class="post-card-right-name" bindtap="onlinktouser" data-id="{{info.data.uid}}">{{info.data.nick}}</view>
+        <view class="post-card-right-content">{{info.data.content}}</view>
+        <view class="post-card-right-imgs" style="width:{{info.img.length>3?'400rpx':'100%'}};">
+            <image class="post-card-right-img" wx:for="{{info.data.atlas_list}}" wx:key="{{index}}" src="{{item.image_path}}" bindtap="onviewimg" data-index="{{index}}"></image>
+        </view>
+        <view class="post-card-like-comment">
+            <image class="post-card-like-img"></image>
+            <text class="post-card-like-text">{{info.data.praise_count}}</text>
+            <image class="post-card-like-img"></image>
+            <text class="post-card-like-text">{{info.data.comment_count}}</text>
+        </view>
+        <view class="post-card-right-comment">
+            <view class="post-card-comment-desc">
+                <text class="post-card-comment-username">@{{info.comment_list.from.name}}:</text>
+                <text>{{info.comment_list.content}}</text>
+            </view>
+            <text class="post-card-comment-more" bindtap="linkToPost" data-id="{{info.data.feed_id}}">查看更多评论</text>
+        </view>
+    </view>
+</view>

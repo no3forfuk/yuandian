@@ -1,0 +1,35 @@
+/* pages/index/mall/ydmall/ydmall.wxss */
+
+.ydmall-component {
+    width: 100%;
+    height: 100%;
+    padding: 0 15.08rpx;
+}
+
+.hotcell {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.top-banner {
+    width: 100%;
+    height: 247.98rpx;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hotcell-title-img {
+    width: 18.1rpx;
+    height: 25.94rpx;
+    background-color: #ddd;
+    margin-right: 5px;
+}
+
+.hotcell-title {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    font-size: 12px;
+    align-items: center;
+}
